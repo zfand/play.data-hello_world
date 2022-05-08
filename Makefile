@@ -4,6 +4,7 @@ STACK_SIZE     = 61800
 PRODUCT = HelloWorld.pdx
 
 # Locate the SDK
+export PLAYDATE_SDK_PATH = ~/SDKs/PlaydateSDK/
 SDK = ${PLAYDATE_SDK_PATH}
 ifeq ($(SDK),)
 	SDK = $(shell egrep '^\s*SDKRoot' ~/.Playdate/config | head -n 1 | cut -c9-)
