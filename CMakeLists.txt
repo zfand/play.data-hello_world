@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.14)
 set(CMAKE_C_STANDARD 11)
 
-set(ENVSDK $ENV{PLAYDATE_SDK_PATH})
+set(ENVSDK /home/fand/SDKs/PlaydateSDK/) ## force path to my SDK location
 
 if (NOT ${ENVSDK} STREQUAL "")
 	# Convert path from Windows
@@ -17,7 +17,7 @@ else()
 endif()
 
 if (NOT EXISTS ${SDK})
-	message(FATAL_ERROR "SDK Path not found; set ENV value PLAYDATE_SDK_PATH")
+	message(FATAL_ERROR "SDK Path not found;")
 	return()
 endif()
 
